@@ -9,3 +9,9 @@ edition = "2021"
 sha-1 = "0.9"
 hex = "0.4"
 
+[profile.release]
+lto = true
+codegen-units = 1
+panic = 'abort'
+opt-level = "z"
+strip = true
